@@ -1,0 +1,154 @@
+.create-wrap{
+    min-height: 100%;
+    background: #FF416C;  /* fallback for old browsers */
+    background: linear-gradient(to right, #FF4B2B, #FF416C) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+
+    .inner-wrap{
+        width: 100%;
+        max-width: 1000px;
+        
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+
+            button{
+                background: none;
+                border: 1px solid white;
+                padding: 0.75em 2em;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:hover{
+                    background: white;
+                    color: #FF416C;
+                }
+            }
+        }
+
+        .post{
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            color: black;
+        
+            .post-content{
+                flex: 1;
+                cursor: auto !important;
+                transition: all 0.2s ease;
+                background: white;
+                border-radius: 8px;
+        
+                &:hover{
+                    filter: brightness(0.96);
+                }
+                
+                .content-header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1em;
+                    border-bottom: 1px solid #FF416C;
+                    color: #FF4B2B;
+                    font-size: 16px;
+        
+                    .post-title{
+                        color: #FF4B2B;
+                    }
+                }
+        
+                .post-content-area{
+                    padding: 1em;
+                    white-space: pre-wrap;
+                }
+            }
+        }
+
+        .comment-form{
+            display: block;
+            width: 100%;
+            padding: 1em;
+            padding-bottom: 0em;
+            margin-bottom: 1em;
+            background: white;
+            border-radius: 8px;
+
+            textarea{
+                padding: 8px;
+                margin-bottom: 1em;
+                border: 1px solid #cecece;
+                border-radius: 8px;
+                display: block;
+                width: 100%;
+                resize: none;
+                overflow: hidden;
+                min-height: 50px;
+                max-height: 800px;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            button{
+                border: 1px solid #FF4B2B;
+                background: #FF4B2B;
+                color: white;
+            }
+        }
+
+        .comment-cont{
+
+            .comment{
+                border-radius: 8px;
+                background: white;
+                color: black;
+                margin-bottom: 8px;
+
+                .comment-head{
+                    padding: 0.5em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: solid 1px #FF416C ;
+                    font-size: 14px;
+                    
+                    h3{
+                        font-weight: 400 !important;
+                    }
+                }
+
+                .comment-content{
+                    padding: 0.5em;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        button{
+            background: none;
+            padding: 1em 2em;
+            border-radius: 8px;
+            border: 1px solid white;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 1em;
+
+            &:hover{
+                color: #FF416C;
+                background: white;
+            }
+        }
+    }
+}
