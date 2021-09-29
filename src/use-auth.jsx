@@ -16,7 +16,7 @@ function useProvideAuth() {
 
   const signin = async (username, password) => {
     try {
-      const responseData = await axios.post('http://localhost:5000/auth/login', {
+      const responseData = await axios.post('https://top-blog-jr.herokuapp.com/auth/login', {
         username,
         password,
       });
@@ -31,7 +31,7 @@ function useProvideAuth() {
 
   const signup = async (username, displayname, password) => {
     try {
-      const responseData = await axios.post('http://localhost:5000/auth/signup', {
+      const responseData = await axios.post('https://top-blog-jr.herokuapp.com/auth/signup', {
         username,
         displayname,
         password,
@@ -54,7 +54,7 @@ function useProvideAuth() {
 
   const checkAuth = async () => {
     try {
-      await axios.get('http://localhost:5000/user/profile', {
+      await axios.get('https://top-blog-jr.herokuapp.com/user/profile', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('jwt-fe')}`,
         },

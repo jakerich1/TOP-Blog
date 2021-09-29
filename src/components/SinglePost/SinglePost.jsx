@@ -25,7 +25,7 @@ function SinglePost() {
     if (!id) return;
 
     try {
-      const commentData = await axios.get(`http://localhost:5000/posts/${id}/comments`);
+      const commentData = await axios.get(`https://top-blog-jr.herokuapp.com/posts/${id}/comments`);
       setComments(commentData.data);
     } catch (error) {
       // console.log(error)
@@ -36,7 +36,7 @@ function SinglePost() {
     e.preventDefault();
 
     try {
-      await axios.post(`http://localhost:5000/posts/${id}/comments`,
+      await axios.post(`https://top-blog-jr.herokuapp.com/posts/${id}/comments`,
         {
           content: currentComment,
         },
@@ -60,7 +60,7 @@ function SinglePost() {
       if (!id) return;
 
       try {
-        const postData = await axios.get(`http://localhost:5000/posts/${id}`);
+        const postData = await axios.get(`https://top-blog-jr.herokuapp.com/posts/${id}`);
         setTitle(postData.data.title);
         setContent(postData.data.content);
         setDate(postData.data.timestamp);
