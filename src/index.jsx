@@ -8,7 +8,7 @@ import './style.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/TOP-Blog">
       <ProvideAuth>
         <App />
       </ProvideAuth>
